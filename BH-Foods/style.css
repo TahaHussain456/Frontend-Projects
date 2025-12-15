@@ -388,7 +388,7 @@ a.order:hover{
     margin: 1rem;
     border-radius: 10px;
     width: 100%;
-    height: auto;
+    height: 60vh;
 }
 
 .card:hover {
@@ -706,4 +706,5 @@ footer{
 
 .footer-bottom a:hover {
     text-decoration: underline;
+
 }
