@@ -1,0 +1,281 @@
+/* -------------------
+    Responsive First Section
+------------------- */
+@media (max-width: 768px){
+  .hero-area{
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .menu-toggle {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  /* Ensure toggle button is always clickable */
+  .menu-toggle {
+    top: 1rem;
+    right: 1.5rem;
+    z-index: 1100;       /* higher than .mobile-menu (1050) */
+  }
+
+  .right {
+    display: none;
+  }
+
+  /* Fullscreen overlay menu */
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    transition: left 0.4s ease;
+    z-index: 1050;
+  }
+
+  .mobile-menu.active {
+    left: 0;
+  }
+
+  .mobile-menu nav ul {
+    flex-direction: column;
+    gap: 20px;
+    font-size: 20px;
+  }
+
+  .mobile-menu nav ul li {
+    padding: 0;
+  }
+  
+  .mobile-menu .right {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .main {
+    padding: 2rem 1rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .main-heading {
+    font-size: 36px;
+    line-height: 44px;
+    padding: 1rem 0;
+  }
+
+  .main-para {
+    font-size: 13px;
+    line-height: 20px;
+    width: 90%;
+    padding: 2rem;
+  }
+
+  .main-button {
+    margin-left: 0;
+  }
+}
+
+/* -------------------
+    Responsive Second Section
+------------------- */
+@media (max-width: 1024px) {
+  .main-2 {
+    flex-direction: column;
+    padding: 2rem 2rem;
+    height: auto;
+    gap: 2rem;
+  }
+
+  .left-2,
+  .right-2 {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .left-2 img,
+  .right-2 img {
+    width: 120px;
+    height: 120px;
+    margin: 15px;
+  }
+
+  .left-22,
+  .right-2 .left-22 {
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-2 {
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .left-2 img,
+  .right-2 img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .left-22 h3,
+  .right-2 .left-22 h3 {
+    font-size: 18px;
+  }
+
+  .left-22 p,
+  .right-2 .left-22 p {
+    font-size: 14px;
+  }
+
+  .main-button-2 {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}
+
+/* 📱 Mobile First Adjustments */
+
+@media (max-width: 600px) {
+  .menu-heading {
+    font-size: 1.5rem;
+  }
+
+  /* Make categories scrollable if too many */
+  .categories {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch; /* smooth scroll */
+  }
+
+  .categories li {
+    flex: 0 0 auto; /* don’t shrink */
+  }
+
+  .card{
+    width: 100%; /* single column */
+    height: auto; /* let height adjust */
+    margin: 0 auto; /* center cards */
+  }
+}
+
+/* 📲 Tablets (>=600px) → 2 cards per row */
+@media (min-width: 600px) {
+  .card {
+    width: 50%; /* 2 per row with gap */
+    height: auto;
+  }
+}
+
+/* 💻 Laptops / Small Desktops (>=900px) → 3 cards per row */
+@media (min-width: 900px) {
+  .card {
+    width: 30%; /* 3 per row */
+    height: 69vh; /* restore original height */
+  }
+}
+
+/* 🖥️ Large Screens (>=1200px) → nicely centered */
+@media (min-width: 1200px) {
+  .filter-content {
+    justify-content: center;
+  }
+  .card {
+    max-width: 350px; /* optional: limit max card size */
+  }
+}
+
+/* -------------------
+    Responsive Third Section  
+------------------- */
+
+@media (max-width: 768px) {
+  .hero-area-3 {
+    flex-direction: column;
+    height: auto;
+    padding: 3rem 1.5rem;
+    text-align: center;
+  }
+
+  .left-3 img {
+    width: 75%;
+    max-width: 350px;
+    margin-bottom: 1.5rem;
+  }
+
+  .right-3 {
+    width: 100%;
+    padding: 1rem;
+    text-align: center; /* center text for better balance */
+  }
+
+  .right-3 h2 {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  .right-3 p {
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
+
+/* 📱 Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .left-3 img {
+    width: 65%;
+    max-width: 250px;
+    margin-bottom: 1.2rem;
+  }
+
+  .right-3 h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .right-3 p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .menu-button {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+}
+/* -------------------
+    Responsive Forth Section
+------------------- */
+@media (max-width: 768px) {
+  .main-4 {
+    flex-direction: column;
+  }
+  .left-4{
+    width: 80%;
+  }
+  .right-4 {
+    min-height: 300px;
+  }
+}
+
+/* -------------------
+    Responsive Footer
+------------------- */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    text-align: center;
+  }
+}
